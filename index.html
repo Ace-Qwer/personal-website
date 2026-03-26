@@ -11,68 +11,390 @@
     <!-- Title -->
     <title>Jeff Tielen - Portfolio</title>
 </head>
-<body>
+<body class="bg-mainblack-50 text-mainblack-800 min-h-screen flex flex-col">
     <!-- Header -->
-    <header>
+    <header class="sticky top-0 z-50 px-4 lg:px-8 py-3">
         <!-- Navbar -->
-        <nav class="w-full h-16 flex items-stretch px-10 border-b-1 border-mainblack-600">
-            <a href="index.html" class="flex items-center text-xl text-mainblack-600 mr-auto">Jeff Tielen</a>
-            <a href="index.html" class="flex items-center justify-center w-28 text-sm text-mainblack-600 hover:bg-mainpink-100 transition-colors border-b-2 border-mainblack-600">Home</a>
-            <a href="cv.html" class="flex items-center justify-center w-28 text-sm text-mainblack-600 hover:bg-mainpink-100 transition-colors border-b-2 border-transparent">CV</a>
-            <a href="projects.html" class="flex items-center justify-center w-28 text-sm text-mainblack-600 hover:bg-mainpink-100 transition-colors border-b-2 border-transparent">Projects</a>
-            <a href="aboutme.html" class="flex items-center justify-center w-28 text-sm text-mainblack-600 hover:bg-mainpink-100 transition-colors border-b-2 border-transparent">About Me</a>
-            <a href="contact.html" class="flex items-center justify-center w-28 text-sm text-mainblack-600 hover:bg-mainpink-100 transition-colors border-b-2 border-transparent">Contact</a>
+        <nav class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-full px-4 lg:px-6 py-2 shadow-lg shadow-mainblack-900/5 border border-mainblack-100">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-lg font-bold text-mainblack-800 hover:text-mainpink-500 transition-colors">
+                    <span class="w-8 h-8 bg-gradient-to-br from-mainpink-500 to-mainpink-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">JT</span>
+                    <span class="hidden sm:inline">Jeff Tielen</span>
+                </a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-white bg-mainpink-500 rounded-full transition-all">Home</a>
+                    <a href="cv.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">CV</a>
+                    <a href="projects.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">Projects</a>
+                    <a href="aboutme.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">About Me</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex items-center justify-center w-10 h-10 text-mainblack-600 hover:bg-mainpink-50 rounded-full transition-colors" id="mobile-menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden mt-2 mx-auto max-w-6xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-lg shadow-mainblack-900/10 border border-mainblack-100 overflow-hidden" id="mobile-menu">
+            <a href="index.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainpink-500 bg-mainpink-50">
+                <span class="w-2 h-2 bg-mainpink-500 rounded-full"></span>
+                Home
+            </a>
+            <a href="cv.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                CV
+            </a>
+            <a href="projects.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                Projects
+            </a>
+            <a href="aboutme.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                About Me
+            </a>
+            <a href="contact.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                Contact
+            </a>
+        </div>
     </header>
+
     <!-- Main content -->
-    <main class="w-full p-20">
+    <main class="flex-1">
         <!-- Hero Section -->
-        <section>
-            <h2>Who am I?</h2>
-            <span>Jeff "Kat" Tielen</span>
-            <span>ACS Student at <a href="https://thomasmore.be/en">Thomas More</a></span>
-            <div class="flex gap-2">
-                <a class="inline-block bg-mainpink-400 hover:bg-mainpink-500 px-4 py-3 text-center justify-center rounded-md text-white" href="projects.html">View My Projects</a>
-                <a class="inline-block bg-mainpink-400 hover:bg-mainpink-500 px-4 py-3 text-center justify-center rounded-md text-white" href="aboutme.html">About me</a>
-                <a class="inline-block bg-mainpink-400 hover:bg-mainpink-500 px-4 py-3 text-center justify-center rounded-md text-white" href="contact.html">Contact</a>
+        <section class="w-full px-6 lg:px-20 py-16 lg:py-24 bg-gradient-to-br from-white to-mainpink-50">
+            <div class="max-w-4xl">
+                <span class="inline-block text-mainpink-500 font-medium mb-4 text-sm uppercase tracking-wider">Welcome to my portfolio</span>
+                <h1 class="text-4xl lg:text-6xl font-bold text-mainblack-800 mb-4 text-balance">Hi, I&apos;m <span class="text-mainpink-500">Jeff &quot;Kat&quot; Tielen</span></h1>
+                <p class="text-xl lg:text-2xl text-mainblack-600 mb-2">ACS Student at <a href="https://thomasmore.be/en" class="text-mainpink-500 hover:text-mainpink-600 underline underline-offset-4 transition-colors">Thomas More</a></p>
+                <p class="text-mainblack-500 mb-8 max-w-2xl text-lg">Passionate about creating elegant solutions through code. I love building web applications and exploring new technologies.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a class="inline-flex items-center gap-2 bg-mainpink-500 hover:bg-mainpink-600 px-6 py-3 rounded-lg text-white font-medium transition-colors shadow-lg shadow-mainpink-500/25" href="projects.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                        View My Projects
+                    </a>
+                    <a class="inline-flex items-center gap-2 bg-white hover:bg-mainblack-50 px-6 py-3 rounded-lg text-mainblack-700 font-medium transition-colors border border-mainblack-200" href="aboutme.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        About Me
+                    </a>
+                    <a class="inline-flex items-center gap-2 bg-white hover:bg-mainblack-50 px-6 py-3 rounded-lg text-mainblack-700 font-medium transition-colors border border-mainblack-200" href="contact.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Contact
+                    </a>
+                </div>
             </div>
         </section>
+
         <!-- Quick Introduction -->
-        <section>
-            <h2>Little Intro</h2>
+        <section class="w-full px-6 lg:px-20 py-16 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-1 bg-mainpink-500 rounded-full"></div>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-mainblack-800">A Little Introduction</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    <div class="space-y-4">
+                        <p class="text-mainblack-600 leading-relaxed">
+                            I&apos;m a dedicated ACS (Application and Computer Science) student with a passion for turning ideas into reality through code. My journey in tech started with curiosity and has grown into a full-fledged commitment to creating impactful digital experiences.
+                        </p>
+                        <p class="text-mainblack-600 leading-relaxed">
+                            When I&apos;m not coding, you can find me exploring new frameworks, contributing to open-source projects, or diving deep into the latest tech trends. I believe in continuous learning and pushing the boundaries of what&apos;s possible.
+                        </p>
+                    </div>
+                    <div class="bg-mainpink-50 rounded-2xl p-6 lg:p-8">
+                        <h3 class="font-semibold text-mainblack-800 mb-4">Quick Facts</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-mainblack-600">
+                                <span class="w-8 h-8 bg-mainpink-500 rounded-full flex items-center justify-center text-white text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </span>
+                                ACS Student at Thomas More
+                            </li>
+                            <li class="flex items-center gap-3 text-mainblack-600">
+                                <span class="w-8 h-8 bg-mainpink-500 rounded-full flex items-center justify-center text-white text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                </span>
+                                Full-Stack Developer
+                            </li>
+                            <li class="flex items-center gap-3 text-mainblack-600">
+                                <span class="w-8 h-8 bg-mainpink-500 rounded-full flex items-center justify-center text-white text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                </span>
+                                Passionate About Clean Code
+                            </li>
+                            <li class="flex items-center gap-3 text-mainblack-600">
+                                <span class="w-8 h-8 bg-mainpink-500 rounded-full flex items-center justify-center text-white text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </span>
+                                Always Learning New Tech
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <!-- Projects Preview -->
-        <section>
-            <h2>Projects Preview</h2>
+        <section class="w-full px-6 lg:px-20 py-16 bg-mainblack-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-1 bg-mainpink-500 rounded-full"></div>
+                        <h2 class="text-2xl lg:text-3xl font-bold text-mainblack-800">Featured Projects</h2>
+                    </div>
+                    <a href="projects.html" class="hidden sm:inline-flex items-center gap-2 text-mainpink-500 hover:text-mainpink-600 font-medium transition-colors">
+                        View All
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project Card 1 -->
+                    <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-br from-mainpink-400 to-mainpink-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-mainblack-800 mb-2 group-hover:text-mainpink-500 transition-colors">Project One</h3>
+                            <p class="text-mainblack-500 text-sm mb-4">A web application showcasing modern development practices and responsive design.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">HTML</span>
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">CSS</span>
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-br from-mainyellow-400 to-mainyellow-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-mainblack-800 mb-2 group-hover:text-mainpink-500 transition-colors">Project Two</h3>
+                            <p class="text-mainblack-500 text-sm mb-4">Mobile-first application built with a focus on user experience and performance.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">React</span>
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">Tailwind</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project Card 3 -->
+                    <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group md:col-span-2 lg:col-span-1">
+                        <div class="h-48 bg-gradient-to-br from-mainblack-600 to-mainblack-800 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-mainblack-800 mb-2 group-hover:text-mainpink-500 transition-colors">Project Three</h3>
+                            <p class="text-mainblack-500 text-sm mb-4">Full-stack solution with database integration and API development.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">Node.js</span>
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">MongoDB</span>
+                                <span class="px-3 py-1 bg-mainpink-50 text-mainpink-600 text-xs rounded-full font-medium">Express</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <a href="projects.html" class="sm:hidden mt-6 inline-flex items-center gap-2 text-mainpink-500 hover:text-mainpink-600 font-medium transition-colors">
+                    View All Projects
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
         </section>
+
         <!-- Skills Snapshot -->
-        <section>
-            <h2>Skill Snapshot</h2>
+        <section class="w-full px-6 lg:px-20 py-16 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-1 bg-mainpink-500 rounded-full"></div>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-mainblack-800">Skills Snapshot</h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Skill Category 1 -->
+                    <div class="p-6 bg-mainpink-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-mainpink-500 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-mainblack-800 mb-3">Frontend</h3>
+                        <ul class="space-y-2 text-sm text-mainblack-600">
+                            <li>HTML5 &amp; CSS3</li>
+                            <li>JavaScript / TypeScript</li>
+                            <li>React &amp; Vue.js</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Category 2 -->
+                    <div class="p-6 bg-mainyellow-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-mainyellow-500 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-mainblack-800 mb-3">Backend</h3>
+                        <ul class="space-y-2 text-sm text-mainblack-600">
+                            <li>Node.js &amp; Express</li>
+                            <li>Python</li>
+                            <li>REST APIs</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Category 3 -->
+                    <div class="p-6 bg-mainblack-100 rounded-2xl">
+                        <div class="w-12 h-12 bg-mainblack-700 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-mainblack-800 mb-3">Databases</h3>
+                        <ul class="space-y-2 text-sm text-mainblack-600">
+                            <li>MySQL &amp; PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Firebase</li>
+                            <li>Redis</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Category 4 -->
+                    <div class="p-6 bg-mainpink-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-mainpink-500 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-mainblack-800 mb-3">Tools</h3>
+                        <ul class="space-y-2 text-sm text-mainblack-600">
+                            <li>Git &amp; GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="w-full px-6 lg:px-20 py-16 bg-gradient-to-br from-mainpink-500 to-mainpink-700">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl lg:text-4xl font-bold text-white mb-4 text-balance">Let&apos;s Work Together</h2>
+                <p class="text-mainpink-100 mb-8 text-lg max-w-2xl mx-auto">Have a project in mind or just want to say hi? I&apos;d love to hear from you!</p>
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-white hover:bg-mainblack-50 px-8 py-4 rounded-lg text-mainpink-600 font-semibold transition-colors shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Get In Touch
+                </a>
+            </div>
         </section>
     </main>
+
     <!-- Footer -->
-    <footer class="w-full border-t-1 border-mainblack-600 px-10 py-8">
-        <div class="flex gap-100 items-start">
-            <!-- Social Media -->
-            <div>
-                <h2 class="text-mainpink-600 font-medium mb-6">Social Media</h2>
-                <ul>
-                    <li class="mb-2"><a href="https://www.instagram.com/__qw3rt__/" class="text-sm text-mainblack-600 hover:text-mainblack-800">Instagram</a></li>
-                    <li class="mb-2"><a href="https://linkedin.com/in/jeff-tielen" class="text-sm text-mainblack-600 hover:text-mainblack-800">LinkedIn</a></li>
-                    <li><a href="https://github.com/KatQwer" class="text-sm text-mainblack-600 hover:text-mainblack-800">GitHub</a></li>
-                </ul>
+    <footer class="w-full px-4 lg:px-8 py-8 bg-mainblack-50/50">
+        <div class="max-w-6xl mx-auto">
+            <!-- Main Footer Card -->
+            <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-lg shadow-mainblack-900/5 border border-mainblack-100">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+                    <!-- Brand -->
+                    <div class="sm:col-span-2 lg:col-span-1">
+                        <a href="index.html" class="inline-flex items-center gap-2 text-lg font-bold text-mainblack-800 hover:text-mainpink-500 transition-colors">
+                            <span class="w-8 h-8 bg-gradient-to-br from-mainpink-500 to-mainpink-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">JT</span>
+                            Jeff Tielen
+                        </a>
+                        <p class="text-sm text-mainblack-500 mt-4 leading-relaxed">ACS Student &amp; Developer passionate about creating beautiful web experiences.</p>
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-2 mt-5">
+                            <a href="https://www.instagram.com/__qw3rt__/" class="w-10 h-10 flex items-center justify-center rounded-full bg-mainblack-100 text-mainblack-600 hover:bg-mainpink-500 hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/jeff-tielen" class="w-10 h-10 flex items-center justify-center rounded-full bg-mainblack-100 text-mainblack-600 hover:bg-mainpink-500 hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/KatQwer" class="w-10 h-10 flex items-center justify-center rounded-full bg-mainblack-100 text-mainblack-600 hover:bg-mainpink-500 hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div>
+                        <h2 class="text-xs font-semibold text-mainblack-400 uppercase tracking-wider mb-4">Navigation</h2>
+                        <ul class="space-y-3">
+                            <li><a href="index.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">Home</a></li>
+                            <li><a href="cv.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">CV</a></li>
+                            <li><a href="projects.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">Projects</a></li>
+                            <li><a href="aboutme.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">About Me</a></li>
+                        </ul>
+                    </div>
+                    <!-- Connect -->
+                    <div>
+                        <h2 class="text-xs font-semibold text-mainblack-400 uppercase tracking-wider mb-4">Connect</h2>
+                        <ul class="space-y-3">
+                            <li><a href="https://www.instagram.com/__qw3rt__/" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">Instagram</a></li>
+                            <li><a href="https://linkedin.com/in/jeff-tielen" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">LinkedIn</a></li>
+                            <li><a href="https://github.com/KatQwer" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <!-- Other -->
+                    <div>
+                        <h2 class="text-xs font-semibold text-mainblack-400 uppercase tracking-wider mb-4">Other</h2>
+                        <ul class="space-y-3">
+                            <li><a href="legalnotice.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">Legal Notice</a></li>
+                            <li><a href="contact.html" class="text-sm text-mainblack-600 hover:text-mainpink-500 hover:translate-x-1 inline-block transition-all">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- Other -->
-            <div>
-                <h2 class="text-mainpink-600 font-medium mb-6">Other</h2>
-                <ul>
-                    <li class="mb-2"><a href="legalnotice.html" class="text-sm text-mainblack-600 hover:text-mainblack-800">Legal Notice</a></li>
-                    <li><a href="contact.html" class="text-sm text-mainblack-600 hover:text-mainblack-800">Contact</a></li>
-                </ul>
+            <!-- Copyright disclaimer -->
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 px-4">
+                <span class="text-sm text-mainblack-400">&copy; Jeff Tielen 2026. All rights reserved.</span>
+                <div class="flex items-center gap-1 text-sm text-mainblack-400">
+                    Made with
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-mainpink-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    in Belgium
+                </div>
             </div>
         </div>
-        <!-- Copyright disclaimer -->
-        <span class="block text-sm text-mainblack-600 mt-8">&copy; Jeff Tielen 2026. All rights reserved.</span>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
