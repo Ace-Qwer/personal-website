@@ -1,0 +1,43 @@
+{
+    "personal-portfolio": {
+        "title": "Portfolio Website",
+        "description": "My personal portfolio where you can see my skills, cv, projects and where you can contact me! It uses HTML, Tailwind CSS & Javascript. It's got both a desktop and mobile view and features my very own styling!",
+        "features": [
+            "Responsive design for all screen sizes",
+            "Modern UI",
+            "Contact form with email integration",
+            "CV to look at my experiences"
+        ],
+        "tech": ["HTML", "Tailwind CSS", "JavaScript"],
+        "date": "2026",
+        "liveUrl": "https://jeff-tielen.netlify.app/",
+        "githubUrl": "https://github.com/Ace-Qwer/personal-website",
+        "images": [
+            "./resources/img/portfolio1.png",
+            "./resources/img/portfolio2.png",
+            "./resources/img/portfolio3.png",
+            "./resources/img/portfolio4.png",
+            "./resources/img/portfolio5.png"
+        ]        
+    },
+    "skill2-project": {
+        "title": "Website The Andersons",
+        "description": "This is a website me and my teammates had to build for our Skill Integration Lab 2 course in my 2nd year at Thomas More. It uses TALL-stack to make a secure portal for a family to live their lives with. (DISCLAIMER: all data seen in the photos is mock data)",
+        "features": [
+            "Responsive design",
+            "Modern UI",
+            "Elderly-friendly UI",
+            "Multiple account types with different permissions"
+        ],
+        "tech": ["PHP", "StarUML", "Tailwind CSS", "Alpine.js", "Laravel", "Livewire", "SQL"],
+        "date": "2026",
+        "liveUrl": "#",
+        "githubUrl": "https://github.com/itfactory-tm/2026-ProjectSKIL2-503",
+        "images": [
+            "./resources/img/skill2_project1.png",
+            "./resources/img/skill2_project2.png",
+            "./resources/img/skill2_project3.png",
+            "./resources/img/skill2_project4.png"
+        ]        
+    }
+}
