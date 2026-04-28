@@ -7,35 +7,59 @@
     <meta name="description" content="Legal notice for Jeff Tielen's portfolio website.">
     <link rel="stylesheet" href="./resources/css/output.css">
     <link rel="shortcut icon" href="./resources/svg/favicon/favicon.svg" type="image/x-icon">
-    <title>Legal Notice - Jeff Tielen</title>
+    <title>Jeff Tielen - Legal Notice</title>
 </head>
 
 <body class="bg-mainblack-50 text-mainblack-800 min-h-screen flex flex-col">
 
-    <!-- HEADER (same as your original) -->
+    <!-- Header -->
     <header class="sticky top-0 z-50 px-4 lg:px-8 py-3">
+        <!-- Navbar -->
         <nav class="max-w-6xl mx-auto bg-white/80 backdrop-blur-xl rounded-full px-4 lg:px-6 py-2 shadow-lg shadow-mainblack-900/5 border border-mainblack-100">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2 text-lg font-bold text-mainblack-800 hover:text-mainpink-500 transition-colors">
-                    <span class="w-8 h-8 flex items-center justify-center">
-                        <img src="./resources/svg/favicon/favicon.svg" alt="">
-                    </span>
+                    <span class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"><img src="./resources/svg/favicon/favicon.svg" alt=""></span>
                     <span class="hidden sm:inline">Jeff Tielen</span>
                 </a>
-
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-1">
-                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full">Home</a>
-                    <a href="cv.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full">CV</a>
-                    <a href="projects.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full">Projects</a>
-                    <a href="aboutme.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full">About Me</a>
-                    <a href="contact.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full">Contact</a>
+                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">Home</a>
+                    <a href="cv.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">CV</a>
+                    <a href="projects.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">Projects</a>
+                    <a href="aboutme.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">About Me</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm font-medium text-mainblack-600 hover:text-mainpink-500 hover:bg-mainpink-50 rounded-full transition-all">Contact</a>
                 </div>
-
-                <button class="md:hidden flex items-center justify-center w-10 h-10 text-mainblack-600 hover:bg-mainpink-50 rounded-full" id="mobile-menu-btn">
-                    ☰
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex items-center justify-center w-10 h-10 text-mainblack-600 hover:bg-mainpink-50 rounded-full transition-colors" id="mobile-menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden mt-2 mx-auto max-w-6xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-lg shadow-mainblack-900/10 border border-mainblack-100 overflow-hidden" id="mobile-menu">
+            <a href="index.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500">
+                <span class="w-2 h-2 bg-mainpink-500 rounded-full"></span>
+                Home
+            </a>
+            <a href="cv.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                CV
+            </a>
+            <a href="projects.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                Projects
+            </a>
+            <a href="aboutme.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainblack-600 hover:bg-mainpink-50 hover:text-mainpink-500 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                About Me
+            </a>
+            <a href="contact.html" class="flex items-center gap-3 px-5 py-3 text-sm font-medium text-mainpink-500 bg-mainpink-50 transition-colors">
+                <span class="w-2 h-2 bg-transparent rounded-full"></span>
+                Contact
+            </a>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
